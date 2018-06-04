@@ -1,0 +1,8 @@
+<div>
+<Table style="width:100%">
+<tr><th>ID</th><th>Client List</th><th></th><th></th><th></th><th></th></tr>
+<% purchases.forEach( function(model) { %>
+<tr><td><%=model.id%></td><td><%=model.firstname%></td><td><%=model.surname%></td><td><%=model.city%></td><td><a href=/deal/update/>Update</a></td><td><a href=/deal/delete/1>Delete</a></td></tr>
+  <% });%>
+</Table>
+</div>

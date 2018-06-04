@@ -1,0 +1,26 @@
+<!--index.ejs-->
+<!--index.ejs-->
+
+<!--Cards Container-->
+<h1>Purchase Record</h1>
+<p>Lists of purchase records.</p>
+</br>
+<div class="row">
+      <% purchases.forEach( function(model) { %>
+        <div class="col-4">
+        <div class="card " style="width: 20rem;">
+          <h4 class="card-title"><%=model.firstname%> <%=model.surname%> - <%=model.city%></h4>
+          <img class="card-img-top" src="<%=model.image%>" alt="Photo">
+          <p class="card-text">Client Name: <%=model.firstname%> <%=model.surname%></p>
+          <p class="card-text">Email: <%=model.email%></p>
+          <p class="card-text">Region:<%=model.region%></p>
+          <p class="card-text">Location:<%=model.city%></p>
+          <p class="card-text">Class: <%=model.class%></p>
+          <p class="card-text">Price: &#36;<%=model.price%></p>
+          <p class="card-text">Purchase Date:<%=model.purchasedate%></p>
+          <p class="card-text">Tour Dates:<%=model.tourdates%></p>
+        </br>
+      </div>
+    </div>
+      <% }); %>
+  </div>

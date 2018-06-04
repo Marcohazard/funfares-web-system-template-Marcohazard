@@ -1,0 +1,127 @@
+￼￼￼￼￼￼<!--create.ejs-->
+<h2>Register Tour</h2>
+<p>Register the tour by filling in the form. Only the administrationers have the permission to modify the tour list.</p>
+<img src="/images/airportbanner.jpg" alt="Banner" height="300" width="1000">
+
+<form action="/deal/create" method="POST" class="form-horizontal">
+
+<br>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="regionSelect">Region: </label>
+    <div class="col-sm-8">
+    <select class="form-control" name="Deal[region]" id="regionSelect">
+      <option>East Asia</option>
+      <option>South-east Asia</option>
+      <option>Americas</option>
+      </div>
+    </select>
+  </div>
+
+<br>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="citySelect">City: </label>
+    <div class="col-sm-8">
+    <select class="form-control" name="Deal[city]" id="citySelect">
+      <option>Osaka</option>
+      <option>Seoul</option>
+      <option>Cebu</option>
+      <option>Singapore</option>
+      <option>Los Angeles</option>
+      <option>Boston</option>
+      </div>
+    </select>
+  </div>
+
+<br>
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="classSelect">Class: </label>
+    <div class="col-sm-8">
+    <select class="form-control" name="Deal[class]" id="classSelect">
+      <option>Business</option>
+      <option>Economy</option>
+    </select>
+    </div>
+  </div>
+
+<br>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" for="priceSelect">Price:</label>
+  <div class="col-sm-8">
+    <input class="form-control" name="Deal[price]" type="number" value="1000" id="priceSelect">
+  </div>
+</div>
+
+<br>
+
+<div class="form-group">
+    <label class="control-label col-sm-2" for="validDate">Deal Valid Till: </label>
+    <div class="col-sm-8">
+        <input class="form-control" name="Deal[validdate]" type="text" placeholder="MM/DD/YEAR"  id="validDate">
+    </div>
+</div>
+
+<br>
+
+<div class="form-group">
+    <label class="control-label col-sm-2" for="image">Image: </label>
+    <div class="col-sm-8">
+        <input class="form-control" name="Deal[image]" type="text" placeholder="/images/filename.jpg" id="image">
+    </div>
+</div>
+
+<br>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" for="quotaSelect">Quota: </label>
+  <div class="col-sm-8">
+    <input class="form-control" name="Deal[quota]" type="number" value="100" id="quotaSelect">
+  </div>
+</div>
+
+<br>
+
+<div class="form-group">
+    <label class="control-label col-sm-2" for="dates">Dates: </label>
+    <div class="col-sm-8">
+        <input class="form-control" name="Deal[dates]" type="text" value="01/01/2017 - 12/31/2017"  id="dates"/>
+        <script type="text/javascript">
+        $(function() {
+            $('input[name="Deal[dates]"]').daterangepicker();
+        });
+        </script>
+    </div>
+</div>
+
+    <button class="btn btn-default" type="submit" value="ADD">Submit</button>
+</form>
+
+<!--
+
+Template:
+
+========
+
+<form action="/deal/create" method="POST" class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-sm-2">Name: </label>
+        <div class="col-sm-8">
+            <input class="form-control" name="Deal[name]" type="text">
+        </div>
+    </div>
+
+========
+
+    <div class="form-group">
+        <label class="control-label col-sm-2">Age: </label>
+        <div class="col-sm-8">
+            <input class="form-control" name="Deal[age]" type="number" min="0" max="120">
+        </div>
+    </div>
+
+========
+-->

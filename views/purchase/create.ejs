@@ -1,0 +1,146 @@
+<!--Create.ejs-->
+<h2>Purchase Form</h2>
+<p>Take a purchase for your tour here. Please fill in the form</p>
+<img src="/images/airportbanner.jpg" alt="Banner" height="300" width="1000">
+
+<form action="/purchase/create" method="POST" class="form-horizontal">
+
+<br>
+
+<div class="form-group">
+  <label class="control-label col-sm-2"  for="firstnameSelect">First Name:</label>
+  <div class="col-sm-8">
+  <input type="text" class="form-control" name="Purchase[firstname]" placeholder="First Name" id="firstnameSelect">
+  </div>
+</div>
+<br>
+
+<div class="form-group">
+  <label class="control-label col-sm-2"  for="surnameSelect">Surname:</label>
+  <div class="col-sm-8">
+  <input type="text" class="form-control" name="Purchase[surname]" placeholder="Surname" id="surnameSelect">
+  </div>
+</div>
+<br>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" for="ageSelect">Age: </label>
+  <div class="col-sm-8">
+    <input class="form-control" name="Purchase[age]" type="number" value="1" id="ageSelect">
+  </div>
+</div>
+
+<br>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="sexSelect">Sex: </label>
+    <div class="col-sm-8">
+    <select class="form-control" name="Purchase[sex]" id="sexSelect">
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+    </div>
+  </div>
+
+<br>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="emailSelect">Email: </label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" name="Purchase[email]" placeholder="example@email.com" id="emailSelect">
+    </div>
+  </div>
+
+<br>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" for="emailSelect">Photo: </label>
+  <div class="col-sm-8">
+    <input type="text" class="form-control" name="Purchase[image]" placeholder="Please type the URL of your photo in this format: /image/yourimagename.jpg" id="imageSelect">
+  </div>
+</div>
+
+<br>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="regionSelect">Region: </label>
+    <div class="col-sm-8">
+    <select class="form-control" name="Purchase[region]" id="regionSelect">
+      <option>East Asia</option>
+      <option>South-east Asia</option>
+      <option>Americas</option>
+    </select>
+    </div>
+  </div>
+
+<br>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="citySelect">City: </label>
+    <div class="col-sm-8">
+    <select class="form-control" name="Purchase[city]" id="citySelect">
+      <option>Osaka</option>
+      <option>Seoul</option>
+      <option>Cebu</option>
+      <option>Singapore</option>
+      <option>Los Angeles</option>
+      <option>Boston</option>
+    </select>
+    </div>
+  </div>
+
+<br>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="classSelect">Class: </label>
+    <div class="col-sm-8">
+    <select class="form-control" name="Purchase[class]" id="classSelect">
+      <option>Business</option>
+      <option>Economy</option>
+    </select>
+    </div>
+  </div>
+
+<br>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" for="priceSelect">Price:</label>
+  <div class="col-sm-8">
+    <input class="form-control" name="Purchase[price]" type="number" value="1000" id="priceSelect">
+  </div>
+</div>
+
+<br>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" for="amountSelect">Amount of Tickets: </label>
+  <div class="col-sm-8">
+    <input class="form-control" name="Purchase[amount]" type="number" value="1" id="amountSelect">
+  </div>
+</div>
+
+<br>
+
+<div class="form-group">
+    <label class="control-label col-sm-2" for="purchaseDate">Purchase Date: </label>
+    <div class="col-sm-8">
+        <input class="form-control" name="Purchase[purchasedate]" type="text" placeholder="DD/MM/YEAR" id="purchaseDate">
+    </div>
+</div>
+
+<br>
+
+<div class="form-group">
+    <label class="control-label col-sm-2" for="tourDates">Tour Dates: </label>
+    <div class="col-sm-8">
+        <input class="form-control" name="Purchase[tourdates]" type="text" value="01/01/2017 - 12/31/2017"  id="tourDates"/>
+        <script type="text/javascript">
+        $(function() {
+            $('input[name="Purchase[tourdates]"]').daterangepicker();
+        });
+        </script>
+    </div>
+</div>
+
+    <button class="btn btn-default" type="submit" value="ADD">Submit</button>
+</form>

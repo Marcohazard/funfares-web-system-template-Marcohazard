@@ -1,0 +1,38 @@
+<!--update.ejs-->
+<h2>Deal Update form</h2>
+<form action="/deal/update/<%=deal.id%>" method="POST">
+    <div>
+        <label>Region</label>
+        <input name="Deal[region]" type="text" value="<%=deal.region%>">
+    </div>
+    <div>
+        <label>City</label>
+        <input name="Deal[city]" type="text" value="<%=deal.city%>">
+    </div>
+    <div>
+        <label>Class</label>
+        <input name="Deal[class]" type="text" value="<%=deal.class%>">
+    </div>
+    <div>
+        <label>Price</label>
+        <input name="Deal[price]" type="text" value="<%=deal.price%>">
+    </div>
+
+    <div>
+        <label>Validdate</label>
+        <input name="Deal[validdate]" type="text" value="<%=deal.validdate%>">
+    </div>
+    <div>
+        <label>Image</label>
+        <input name="Deal[image]" type="text" value="<%=deal.image%>">
+    </div>
+    <div>
+        <label>Quota</label>
+        <input name="Deal[quota]" type="text" value="<%=deal.quota%>">
+    </div>
+    <div>
+        <label>Dates</label>
+        <input name="Deal[dates]" type="text" value="<%=deal.dates%>">
+    </div>
+    <button type="submit" value="ADD">Update</button>
+</form>

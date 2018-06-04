@@ -1,0 +1,19 @@
+<h2>Admin Page</h2>
+<p>Administrative tool, only the administrators have the right to view and modify the data.</p>
+</br>
+<h4>Client Profiles:</h4>
+<p><a href="/purchase/index">Client List</a> - list of clients.</p>
+</br>
+<p><a href="/purchase/admin">Client Management</a> - modify client purchase records here.</p>
+</br>
+</br>
+<h4>Location Management:</h4>
+</br>
+<div>
+<Table style="width:100%">
+<tr><th>ID</th><th>Destination</th><th></th><th></th></tr>
+<% deals.forEach( function(model) { %>
+<tr><td><%=model.id%></td><td><%=model.city%></td><td><a href=/deal/update/>Update</a></td><td><a href=/deal/delete/1>Delete</a></td></tr>
+  <% });%>
+</Table>
+</div>

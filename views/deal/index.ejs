@@ -1,0 +1,44 @@
+<!--index.ejs-->
+
+<!--Cards Container-->
+<h2>What is Fun Fares</h2>
+<p>Your one and only online traveling agency.</p>
+<img src="/images/airportbanner.jpg" alt="Banner" height="300" width="1000">
+
+<p>Fun Fares flies around the world and provides the best deals for travelling enthutiasts.<p>
+</br>
+</br>
+<h1>New Fares</h1>
+<p>Check out our best deals here. Fun Fares provides the best deals ever made, just for you.</p>
+</br>
+<div class="row">
+      <% deals.forEach( function(model) { %>
+        <div class="col-4">
+        <div class="card " style="width: 20rem;">
+        <img class="card-img-top" src="<%=model.image%>" alt="Image">
+        <div class="card-block">
+          <h4 class="card-title"><%=model.city%></h4>
+          <p class="card-text"><%=model.class%>, &#36;<%=model.price%></p>
+          <p class="card-text">Valid till: <%=model.validdate%></p>
+          <a href="/purchase/create" class="btn btn-primary">BUY ME</a>
+          <p class="card-text"><%=model.dates%></p>
+        </br>
+        </div>
+      </div>
+    </div>
+      <% }); %>
+  </div>
+
+
+<!--
+====
+Debug Mode:
+
+</br>
+<table class="table">
+    <% deals.forEach( function(model) { %>
+        <tr><td><%=model.region%></td><td><%=model.city%></td><td><%=model.class%></td><td><%=model.price%><td><%=model.validdate%><td><%=model.image%></td></td><td><%=model.quota%></td><td><%=model.dates%></td></tr>
+    <% }); %>
+</table>
+====
+-->

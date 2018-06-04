@@ -1,0 +1,8 @@
+view: function (req, res) {
+    Person.findOne(req.params.id).exec( function(err, model) {
+        if (model != null)
+            return res.view('person/view', {'person': model});
+        else
+            return res.send("No such person");
+    });
+},

@@ -1,0 +1,28 @@
+<!--paginate.ejs-->
+<table>
+    <% purchases.forEach( function(model) { %>
+        <tr><td><%=model.firstname%></td><td><%=model.surname%></td><td><%=model.age%><td><%=model.sex%></td><td><%=model.email%></td><td><%=model.region%></td><td><%=model.city%></td></td><td><%=model.class%></td><td><%=model.price%></td><td><%=model.purchasedate%></td><td><%=model.amount></td><td><%=model.tourdates></td></tr>
+    <% }); %>
+</table>
+
+<% var current = req.query.page %>
+
+<nav>
+    <ul class="pagination">
+        <!-- <li>
+            <a href="/deal/paginate/?page=<%=Math.max(current-1, 1)%>" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li> -->
+
+        <%for(i=1;i<=count;i++){%>
+            <li><a href="/purchase/paginate/?page=<%=i%>"> <%=i%> </a></li>
+        <%}%>
+
+        <!-- <li>
+            <a href="/deal/paginate/?page=<%=Math.min(current*1+1, count)%>" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li> -->
+    </ul>
+</nav>
